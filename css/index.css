@@ -145,7 +145,7 @@ img {
   background-color: #1ac888;
 }
 
-.navbar .container, .navbar-secondary .container, .navbar, .navbar-secondary {
+.navbar .container, .navbar {
   width: 100%;
   display: flex;
   align-items: center;
@@ -153,16 +153,12 @@ img {
   box-sizing: border-box;
 }
 
-.navbar, .navbar-secondary {
+.navbar {
   padding: 1rem 2rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.navbar .site-title, .navbar-secondary .site-title {
+.navbar .site-title {
   font-size: 1.5rem;
-}
-
-.navbar-secondary {
-  background-color: #1ac888;
 }
 
 .badge-orange {
