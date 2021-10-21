@@ -1,14 +1,16 @@
 const { src, dest, watch, series } = require('gulp')
 const sass = require('gulp-sass')(require('sass'))
+const purgecss = require('gulp-purgecss')
 
 const buildStyles = () => {
     return src('raven/**/*.scss')
         .pipe(sass())
+        .pipe(purgecss({ content: ['*.html']}))
         .pipe(dest('css'))
 }
 
 const watchTask = () => {
-    watch(['raven/**/*.scss'], buildStyles)
+    watch(['raven/**/*.scss', '*.html'], buildStyles)
 }
 
 exports.default = series(buildStyles, watchTask)
